@@ -24,6 +24,7 @@ cabal-version:       >=1.8
 library
   exposed-modules:     Data.LanguageCodes
   build-depends:       base >=4.6 && <5
+  exposed-modules:     Data.LanguageCodes.ISO639_1
 
 test-suite tests
   type:                exitcode-stdio-1.0
