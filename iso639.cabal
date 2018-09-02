@@ -22,9 +22,13 @@ extra-source-files:  generator/Generate.hs
 cabal-version:       >=1.8
 
 library
+  ghc-options: -fprof-auto -Wall -fwarn-tabs -fwarn-incomplete-record-updates -fwarn-monomorphism-restriction -fwarn-unused-do-bind -fwarn-implicit-prelude
+  -- hs-source-dirs:      Data/
   exposed-modules:     Data.LanguageCodes
+                     , Data.LanguageCodes.ISO639_1
+                     , Data.LanguageCodes.ISO639_2
   build-depends:       base >=4.6 && <5
-  exposed-modules:     Data.LanguageCodes.ISO639_1
+  exposed-modules:     
 
 test-suite tests
   type:                exitcode-stdio-1.0
