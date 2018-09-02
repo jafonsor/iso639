@@ -36,4 +36,5 @@ test-suite tests
   build-depends:       base >=4.6 && <5
                      , iso639
                      , hspec
+                     , hspec-discover
   hs-source-dirs:      test
