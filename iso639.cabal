@@ -32,7 +32,7 @@ library
 
 test-suite tests
   type:                exitcode-stdio-1.0
-  main-is:             Test.hs
+  main-is:             Spec.hs
   build-depends:       base >=4.6 && <5
                      , iso639
                      , hspec

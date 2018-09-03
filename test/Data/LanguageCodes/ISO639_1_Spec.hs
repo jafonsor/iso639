@@ -1,4 +1,4 @@
-module ISO639_1_Spec where
+module Data.LanguageCodes.ISO639_1_Spec where
 
 import Test.Hspec
 import Data.LanguageCodes.ISO639_1
@@ -22,16 +22,16 @@ spec =
       AA < AB `shouldBe` True
     
     describe "toChars" $
-      it "should return country codes for a given ISO639_1" $
+      it "should return the language code for a given ISO639_1" $
         toChars AA `shouldBe` ('a', 'a')
 
     describe "fromChars" $ do
-      it "should return the ISO639_1 for a given country code" $
+      it "should return the ISO639_1 for a given language code" $
         fromChars 'a' 'a' `shouldBe` Just AA
       
       it "should return Nothing if the code given is not an ISO639_1 code" $
         fromChars 'a' 'c' `shouldBe` (Nothing :: Maybe ISO639_1)
 
     describe "language" $
-      it "should return the language spoken in country represented by an ISO639_1" $
+      it "should return the language spoken in language represented by an ISO639_1" $
         language AA `shouldBe` "Afar"
